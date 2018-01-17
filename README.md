@@ -1,5 +1,9 @@
-# Default Middleman Project Template
+# Middleman Project Template
 
-This is the [Middleman] template used when you run `middleman init`.
+A [Middleman](https://middlemanapp.com) template.
 
-[Middleman]: https://middlemanapp.com/
+## Usage
+
+```bash
+middleman init MY_PROJECT_FOLDER -T juliendargelos/middlemlan-template
+```
