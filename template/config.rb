@@ -47,13 +47,14 @@ page '/*.txt', layout: false
 # )
 
 # Helpers
-# Methods defined in the helpers folder are available in templates
+# Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-Dir[__dir__ + '/helpers/*.rb'].each do |file|
-  require file
-  helpers File.basename(file, '.rb').camelize.constantize
-end
+# helpers do
+#   def some_helper
+#     'Helping'
+#   end
+# end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
