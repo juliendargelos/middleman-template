@@ -5,7 +5,7 @@
 
 Component.Element = class Element extends Component {
   constructor() {
-    super.constructor(...arguments)
+    super(...arguments)
     if(!this.element) this.element = null
   }
 
