@@ -14,5 +14,8 @@
     "url": "https://www.github.com/juliendargelos/middleman-app"
   },
   "author": "Julien Dargelos",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "smoothscroll-polyfill": "^0.4.0"
+  }
 }

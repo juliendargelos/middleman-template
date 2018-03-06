@@ -1,4 +1,5 @@
 require 'thor/group'
+require 'pathname'
 
 module Middleman
   class Generator < ::Thor::Group
@@ -8,6 +9,10 @@ module Middleman
 
     def copy_default_files
       directory 'template', '.', exclude_pattern: /\.DS_Store$/
+    end
+
+    def install_npm_dependencies
+      run 'npm install'
     end
   end
 end
