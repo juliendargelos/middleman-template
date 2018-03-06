@@ -20,4 +20,8 @@ Animation.Transition = class Transition extends Animation {
     for(var property in this.values) this.origin[property] = this.subject[property] || 0
     super.start()
   }
+
+  static animate() {
+    (new this(...arguments)).start()
+  }
 }
