@@ -134,16 +134,6 @@ Component.Element.Offset = class Offset extends Component.Element {
     ))))
   }
 
-  progressIn(offset, target) {
-    if(typeof target !== 'object' || target == null) target = {}
-    if(typeof target.x !== 'number' || typeof target.y !== 'number') {
-      offset.freeze(_ => {
-        target.x = offset.center.x
-      })
-    }
-    (target - this.x
-  }
-
   freeze(callback, update) {
     var freeze = !this.frozen || update
 
