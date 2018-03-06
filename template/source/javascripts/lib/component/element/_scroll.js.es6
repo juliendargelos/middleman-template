@@ -1,6 +1,6 @@
 //= require smoothscroll-polyfill/dist/smoothscroll
 //= require_self
-//= require ./scroll/application
+//= require ./scroll/_application
 
 Component.Element.Scroll = class Scroll extends Component.Element {
   get top() {
