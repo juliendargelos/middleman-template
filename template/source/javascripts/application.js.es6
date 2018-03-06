@@ -18,5 +18,6 @@ class Application extends Component.Element {
 
   static init() {
     this.singleton(window)
+    super.init()
   }
 }
