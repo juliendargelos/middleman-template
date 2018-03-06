@@ -1,5 +1,4 @@
 //= require_self
-//= require ./component/_object
 //= require ./component/_element
 
 class Component {
