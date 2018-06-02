@@ -7,6 +7,7 @@ Component.Element = class Element extends Component {
   constructor() {
     super(...arguments)
     if(!this.element) this.element = null
+    this.constructor.all.push(this)
   }
 
   get element() {
@@ -14,7 +15,7 @@ Component.Element = class Element extends Component {
   }
 
   set element(v) {
-    if(!(v instanceof Node) && !(v instanceof Window)) v = document.createElement('div')
+    if(!(v instanceof Node) && !(v instanceof Window)) v = this.constructor.element
     this._element = v
 
     this.load()
@@ -65,5 +66,34 @@ Component.Element = class Element extends Component {
     events.split(' ').forEach(event => {
       if(event) this.element.removeEventListener(event, listener, useCapture)
     })
+  }
+
+  static update() {
+    this.all.forEach(component => component.update())
+  }
+
+  static element() {
+    return document.createElement('div')
+  }
+
+  static get in(scope) {
+    return null
+  }
+
+  static instanciate(scope) {
+    if(!this.element) return []
+
+    return Array.prototype.slice
+      .call((scope || document).querySelectorAll(this.selector))
+      .map(element => this.for(element))
+  }
+
+  static for(element) {
+    return this.all.find(component => component.element === element) || new this(element)
+  }
+
+  static init() {
+    super.init()
+    this.all = []
   }
 }

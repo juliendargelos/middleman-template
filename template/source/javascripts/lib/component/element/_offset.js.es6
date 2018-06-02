@@ -83,7 +83,7 @@ Component.Element.Offset = class Offset extends Component.Element {
     else margin = v
 
     if(transform) {
-      this.freeze(_ => {
+      this.freeze(() => {
         ['top', 'left', 'right', 'bottom'].forEach(side => {
           value = margin[side]
           if(typeof value === 'function') value = value.call(this, this)
@@ -113,7 +113,7 @@ Component.Element.Offset = class Offset extends Component.Element {
   }
 
   containedIn(offset, margins) {
-    return this.freeze(_ => offset.freeze(_ => this.spread(margins, _ => (
+    return this.freeze(() => offset.freeze(() => this.spread(margins, () => (
       this.top >= offset.top &&
       this.left >= offset.left &&
       this.right <= offset.right &&
@@ -122,7 +122,7 @@ Component.Element.Offset = class Offset extends Component.Element {
   }
 
   visibleIn(offset, margins) {
-    return this.freeze(_ => offset.freeze(_ => this.spread(margins, _ => (
+    return this.freeze(() => offset.freeze(() => this.spread(margins, () => (
       this.top < offset.bottom &&
       this.left < offset.right &&
       this.right > offset.left &&

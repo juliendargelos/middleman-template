@@ -24,9 +24,5 @@ module Middleman
     def install_dependencies
       run 'yarn install'
     end
-
-    def initialize_git_repository
-      run 'git init && git add . && git commit -m "Initial commit"'
-    end
   end
 end
