@@ -76,10 +76,6 @@ Component.Element = class Element extends Component {
     return document.createElement('div')
   }
 
-  static get in(scope) {
-    return null
-  }
-
   static instanciate(scope) {
     if(!this.element) return []
 
