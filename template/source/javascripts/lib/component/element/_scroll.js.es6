@@ -19,6 +19,14 @@ Component.Element.Scroll = class Scroll extends Component.Element {
     this.element.scrollLeft = v
   }
 
+  load() {
+
+  }
+
+  update() {
+
+  }
+
   to() {
     this.element.scrollTo(...this.constructor.parameters(...arguments))
     return this

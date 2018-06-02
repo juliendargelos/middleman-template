@@ -1,4 +1,4 @@
-ruby '2.5.0'
+ruby '2.5.1'
 
 source 'https://rubygems.org'
 
@@ -11,5 +11,4 @@ gem 'sass-globbing'
 gem 'byebug'
 gem 'middleman-sprockets'
 gem 'sprockets-es6'
-gem 'middleman-deploy', git: 'https://github.com/middleman-contrib/middleman-deploy', branch: :master
 gem 'middleman-livereload'

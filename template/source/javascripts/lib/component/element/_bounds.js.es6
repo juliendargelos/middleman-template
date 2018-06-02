@@ -37,6 +37,14 @@ Component.Element.Bounds = class Bounds extends Component.Element.Offset {
     return this._value || this.element.getClientBoundingRect()
   }
 
+  load() {
+
+  }
+
+  update() {
+
+  }
+
   static get application() {
     return this.Application.singleton
   }

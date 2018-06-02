@@ -96,15 +96,11 @@ Component.Element.Offset = class Offset extends Component.Element {
   }
 
   load() {
-    super.load()
-
     if(this.center) this.center.element = this.element
     else this.center = new this.constructor.Center(this.element)
   }
 
   update() {
-    super.update()
-
     this.center.update()
   }
 

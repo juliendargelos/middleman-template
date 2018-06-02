@@ -3,6 +3,7 @@
 
 require 'sprockets/es6'
 
+# activate :<%= extension_name %>
 activate :directory_indexes
 activate :relative_assets
 activate :livereload
@@ -13,11 +14,6 @@ end
 
 activate :sprockets do |sprockets|
   sprockets.supported_output_extensions << '.es6'
-end
-
-activate :deploy do |deploy|
-  deploy.deploy_method = :git
-  deploy.branch = :master
 end
 
 after_configuration do
