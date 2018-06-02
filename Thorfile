@@ -15,6 +15,10 @@ module Middleman
       name.classify
     end
 
+    def username
+      @username ||= run('git config user.name').gsub(/\s/, '').downcase.parameterize || 'myusername'
+    end
+
     source_root File.expand_path(File.dirname(__FILE__))
 
     def copy_default_files

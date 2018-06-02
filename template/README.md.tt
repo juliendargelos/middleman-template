@@ -7,7 +7,7 @@
 ### Clone the repository
 
 ```shell
-git clone git@github.com:juliendargelos/<%= name %>.git
+git clone git@github.com:<%= username %>/<%= name %>.git
 cd <%= name %>
 ```
 
