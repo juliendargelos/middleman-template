@@ -16,7 +16,11 @@ module Middleman
     end
 
     def username
-      @username ||= run('git config user.name').gsub(/\s/, '').downcase.parameterize || 'myusername'
+      @username ||= begin
+                      `git config user.name`.gsub(/\s/, '').downcase.parameterize
+                    rescue
+                      nil
+                    end || 'myusername'
     end
 
     source_root File.expand_path(File.dirname(__FILE__))
